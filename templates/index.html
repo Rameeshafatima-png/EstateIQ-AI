@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EstateIQ AI | Real Estate Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="rail">
+    <a class="brand" href="#estimate"><span class="mark">E</span><b>EstateIQ</b></a>
+    <nav id="nav">
+      <a href="#estimate" class="on">Price estimate</a>
+      <a href="#market">Market</a>
+      <a href="#listings">Properties</a>
+      <a href="#assistant">Assistant</a>
+    </nav>
+    <p class="rail-note"><i class="dot"></i> Model trained on 2022 listings. Chat comes in Step 4.</p>
+  </aside>
+
+  <main>
+    <section id="estimate" class="hero">
+      <div class="hero-copy">
+        <h1>What is this property worth?</h1>
+        <p>Pick a city, size and bedrooms. EstateIQ gives you a price range in rupees, and soon, the reasons behind it.</p>
+        <ul class="facts">
+          <li><b id="s-props">0</b> cleaned listings for sale</li>
+          <li><b id="s-cities">0</b> cities covered</li>
+          <li><b id="s-avg">0</b> median asking price</li>
+        </ul>
+      </div>
+
+      <form class="est" id="est" autocomplete="off">
+        <div class="grid2">
+          <label>City<select name="city" id="city"></select></label>
+          <label>Area name<select name="location" id="loc"></select></label>
+        </div>
+        <div class="grid2">
+          <label>Size<input type="number" name="area" value="10" min="1" step="1"></label>
+          <label>Unit<select name="unit"><option>Marla</option><option>Kanal</option><option>Sq. Yd.</option><option>Square Feet</option></select></label>
+        </div>
+        <div class="grid2">
+          <label>Bedrooms <output id="bed-out">4</output><input type="range" name="bedrooms" min="1" max="10" value="4"></label>
+          <label>Bathrooms <output id="bath-out">3</output><input type="range" name="baths" min="1" max="10" value="3"></label>
+        </div>
+        <div class="result" aria-live="polite">
+          <span>Estimated price for a house</span>
+          <strong id="price">—</strong>
+          <small id="range"></small>
+        </div>
+        <p class="fine" id="fine">Estimate from a Random Forest model trained on 2022 Zameen.com listings. It is a guide, not a valuation.</p>
+      </form>
+    </section>
+
+    <section id="market" class="block">
+      <div class="head"><h2>Price per square foot</h2><p>Median asking rate by city, from the cleaned dataset.</p></div>
+      <div class="bars" id="bars"></div>
+    </section>
+
+    <section id="listings" class="block">
+      <div class="head">
+        <h2>Properties</h2>
+        <div class="chips" id="chips"></div>
+      </div>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section id="assistant" class="block chat">
+      <div class="head"><h2>Ask the assistant</h2><p>Try a question. Live answers arrive with the AI step.</p></div>
+      <div class="log" id="log" aria-live="polite">
+        <div class="msg bot">Hi, I can help you compare areas, budgets and property types.</div>
+      </div>
+      <div class="suggest" id="suggest"></div>
+      <form class="ask" id="ask">
+        <input id="q" placeholder="Ask about a city, budget or area" aria-label="Your question">
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+</div>
+<script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "best": "Random Forest",
+  "test_rows": 4984,
+  "results": {
+    "Linear Regression": {
+      "MAE": 12700234,
+      "RMSE": 62258945,
+      "R2_price": -1.142,
+      "R2_log_price": 0.859
+    },
+    "Decision Tree": {
+      "MAE": 6919174,
+      "RMSE": 14729164,
+      "R2_price": 0.88,
+      "R2_log_price": 0.926
+    },
+    "Random Forest": {
+      "MAE": 6149710,
+      "RMSE": 13434809,
+      "R2_price": 0.9,
+      "R2_log_price": 0.942
+    }
+  }
+}

@@ -1,0 +1,4 @@
+property_id,property_type,city,location,price,baths,bedrooms,area_size,area_type,purpose
+SAMPLE-001,House,Karachi,DHA Defence,45000000,4,5,500,Square Feet,For Sale
+SAMPLE-002,Flat,Karachi,Clifton,18000000,3,3,1800,Square Feet,For Sale
+SAMPLE-003,House,Lahore,DHA Lahore,38000000,4,5,10,Marla,For Sale

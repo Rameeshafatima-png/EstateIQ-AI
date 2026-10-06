@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+jinja2
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+python-dotenv
+joblib
+pydantic
+chromadb
+sentence-transformers
+google-genai
