@@ -9,7 +9,8 @@
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
 ![Status](https://img.shields.io/badge/status-in%20development-F2B134)
 
-![EstateIQ dashboard](docs/screenshots/dashboard.png)
+![EstateIQ dashboard](<img width="1346" height="636" alt="house" src="https://github.com/user-attachments/assets/8d68f551-f031-4f83-b78e-33f0ed91167b" />
+)
 
 </div>
 
